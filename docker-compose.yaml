@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  gogs:
+    container_name: gogs
+    image: gogs/gogs-rpi
+    restart: unless-stopped
+    ports:
+      - "10300:3000"
+      - "10022:22"
+    volumes:
+      - /data/gogs:/data
